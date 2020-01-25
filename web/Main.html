@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="style_main.css">
-
+<!-- -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -14,12 +14,11 @@
       <button onclick="getInput()">Go!</button>
     </div>
     <script src="script.js"></script>
-    <div class="output">
-      <p>music file output here</p>
-      <button onclick="playsong()">Play!</button>
-      <BGSOUND SRC="demo.mid">
-      <A HREF="demo.mid">audio</A>
-      <!-- audio given from python file-->
+    <div class="output"><!--play audio given from python file-->
+      <p>The generated song.</p>
+      <script type='text/javascript' src='http://www.midijs.net/lib/midi.js'></script> <!--library to play midi files-->
+      <button onclick="playsong()">Play</button>
+      <!--<embed src="EyesOnMePiano.mid" hidden="false" border="0" width="310" height="45" volume="75%">-->
     </div>
     <p> Details </p>
   </body>

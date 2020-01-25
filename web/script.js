@@ -4,5 +4,5 @@ function getInput(){
 }
 
 function playsong(){
-  
+  MIDIjs.play('EyesOnMePiano.mid')
 }
