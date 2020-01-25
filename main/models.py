@@ -8,7 +8,12 @@ from keras.layers import LSTM, Conv2D, BatchNormalization, Bidirectional, Dense,
 from keras.optimizers import Adam
 from keras.losses import categorical_crossentropy
 from tqdm import tqdm
+from preprocess import preprocess
 # END: Imports
+
+X_train, Y_train = preprocess()
+seq_shape = (X_train[1], X_train[2]) # CHANGE THIS IF SOMETHING IS WRONG
+
 
 # START: build dicriminator model
 def disc_model(seq_shape):
@@ -53,6 +58,10 @@ def gen_model(seq_shape):
     return Model(noise, seq)
 # END: build generator model
 
-# compute loss
+# START: train
+def train(epochs, batch_size, sample_intervals):
+        
+# END: train
+
 
 # predict
