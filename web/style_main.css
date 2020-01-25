@@ -16,7 +16,8 @@ h2{
 }
 
 h3{
-  padding-left: 10%
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 body{
@@ -28,7 +29,7 @@ footer{
 }
 
 p{
-  padding-left: 7.5%
+  text-decoration-color: black;
 }
 
 input{
@@ -47,7 +48,7 @@ button{
   font-size: 20px;
   height: 30px;
   border: none;
-  color: dodgerblue;
+  color: black;
 }
 
 .output{
@@ -59,4 +60,24 @@ button{
 
 .hidden{
   visibility: hidden;
+  height: 5px;
+}
+
+.header1{
+  text-align: center;
+}
+
+.details{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.play{
+  width: 10%;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+
+.play:hover{
+  background: lightgreen;
 }
