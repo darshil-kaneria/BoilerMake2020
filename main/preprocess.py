@@ -8,10 +8,13 @@ import glob
 import keras
 import operator
 
+max_notes=0
+
 def preprocess():
 
     notes = []
     midi = None
+    
 
     data_path = "D:\\Work\\College\\Spring 2020\\gan-dataset\\midi-data\\midi_songs"
     for file in glob.glob(os.path.join(data_path, "*.mid")):
@@ -59,5 +62,5 @@ def preprocess():
     # normalize input
     network_input = network_input / float(max_notes)
     network_output = keras.utils.np_utils.to_categorical(network_output)
-    print(network_input[0])
+    # print(network_input[0])
     return network_input, network_output
