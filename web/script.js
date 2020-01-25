@@ -67,7 +67,26 @@ function fromFile() {
     for (var i = 0; i < bytes.length; i++) {
       data += String.fromCharCode(bytes[i]);
     }
+    // Can call my own function
+    var filename = f.name;
+    response = runPyScript({data, filename});
+    
     load(data, f.name);
   };
   reader.readAsArrayBuffer(f);
 }
+
+function runPyScript(input){
+  var jqXHR = $.ajax({
+      type: "POST",
+      url: "/predict.py",
+      async: false,
+      data: { param: input }
+  });
+
+  return jqXHR.responseText;
+}
+
+// do something with the response
+
+console.log(response);
