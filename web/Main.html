@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--<link rel="stylesheet" href="style_main.css">-->
+<link rel="stylesheet" href="style_main.css">
 <!-- -->
 <html lang="en" dir="ltr">
   <script src="script.js"></script>
@@ -15,13 +15,77 @@
   <body>
     <h3>Instructions</h3>
     <div class="input">
-      <input type="number" name="input" size="15" id="textbox">
+      <input type="number" name="input" size="15" id="textbox"> <!--variable input has user input -->
       <button onclick="getInput()">GO</button>
     </div>
+    <input class="hidden" type=file id=file size=80 onchange='fromFile()'>
+    <p class="hidden" id=log>no file selected</p>
     <p>The generated song.</p>
-    <p><input type=file id=file size=80 onchange='fromFile()'></p>
-    <p id=log>no file selected</p>
     <p><button id=btn onclick='playStop()' disabled>Play</button></p>
+    <script>
+      var log = document.getElementById('log');
+      var btn = document.getElementById('btn');
+      function report(s) { return function() { log.innerHTML = s; }; }
+
+      JZZ.synth.Tiny.register('Web Audio');
+      var out = JZZ().or(report('Cannot start MIDI engine!')).openMidiOut().or(report('Cannot open MIDI Out!'));
+      var player;
+      var playing = false;
+
+      function clear() {
+        if (player) player.stop();
+        playing = false;
+        btn.innerHTML = 'Play';
+        btn.disabled = true;
+      }
+
+      function load(data, name) {
+        try {
+          player = JZZ.MIDI.SMF(data).player();
+          player.connect(out);
+          player.onEnd = function() {
+            playing = false;
+            btn.innerHTML = 'Play';
+          }
+          playing = false;
+          player.play();
+          log.innerHTML = name;
+          btn.innerHTML = 'Stop';
+          btn.disabled = false;
+        }
+        catch (e) {
+          log.innerHTML = e;
+        }
+      }
+
+      function playStop() {
+        if (playing) {
+          player.stop();
+          playing = false;
+          btn.innerHTML = 'Play';
+        }
+        else {
+          player.play();
+          playing = true;
+          btn.innerHTML = 'Stop';
+        }
+      }
+
+      function fromFile() {
+        clear();
+        var reader = new FileReader();
+        var f = document.getElementById('file').files[0];
+        reader.onload = function(e) {
+          var data = '';
+          var bytes = new Uint8Array(e.target.result);
+          for (var i = 0; i < bytes.length; i++) {
+            data += String.fromCharCode(bytes[i]);
+          }
+          load(data, f.name);
+        };
+        reader.readAsArrayBuffer(f);
+      }
+    </script>
     <p> Details </p>
   </body>
   <footer>

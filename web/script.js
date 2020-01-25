@@ -1,10 +1,10 @@
 
 function getInput(){
   let user_song = document.getElementById('textbox').value;
-  alert("output: " + user_song);
+  alert("output: " + user_song); //route to python file call instead
 }
 
-//for playing audio
+//for playing audio, also in html to avoid error on line 12
 var log = document.getElementById('log');
 var btn = document.getElementById('btn');
 function report(s) { return function() { log.innerHTML = s; }; }
