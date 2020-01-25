@@ -32,16 +32,6 @@ p{
   text-decoration-color: black;
 }
 
-input{
-  width: 70%;
-  height: 50px;
-  border: 10px;
-}
-
-.input{
-  text-align: center;
-}
-
 button{
   text-align: center;
   cursor: pointer;
@@ -56,11 +46,6 @@ button{
   width: 33%;
   margin-left: 33%;
   margin-right: 33%
-}
-
-.hidden{
-  visibility: hidden;
-  height: 5px;
 }
 
 .header1{
@@ -80,4 +65,24 @@ button{
 
 .play:hover{
   background: lightgreen;
+}
+
+.record{
+  margin-left: 50%;
+  margin-right: 3%;
+  margin-bottom: 5%;
+  width: 45%;
+}
+
+.fileInput{
+  float: left;
+  margin-left: 9%;
+  margin-right: 3%;
+  width: 45%;
+}
+
+.dot:before {
+  content: ' \25CF';
+  font-size: 350%;
+  margin-left: 5%;
 }

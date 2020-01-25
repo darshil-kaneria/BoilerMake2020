@@ -53,6 +53,10 @@ function playStop() {
   }
 }
 
+function recordStop(){ //needs to be done
+  
+}
+
 function fromFile() {
   clear();
   var reader = new FileReader();
