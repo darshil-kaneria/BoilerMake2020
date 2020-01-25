@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="style_main.css">
+<!--<link rel="stylesheet" href="style_main.css">-->
 <!-- -->
 <html lang="en" dir="ltr">
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jzz"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jzz-synth-tiny"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jzz-input-kbd"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jzz-midi-smf"></script>
   <head>
     <meta charset="utf-8">
     <title>BoilerMake 2020</title>
-    <h2>Name</h2>
+    <h2>Music Generation</h2>
   </head>
   <body>
     <h3>Instructions</h3>
     <div class="input">
       <input type="number" name="input" size="15" id="textbox">
-      <button onclick="getInput()">Go!</button>
+      <button onclick="getInput()">GO</button>
     </div>
-    <script src="script.js"></script>
-    <div class="output"><!--play audio given from python file-->
-      <p>The generated song.</p>
-      <script type='text/javascript' src='http://www.midijs.net/lib/midi.js'></script> <!--library to play midi files-->
-      <button onclick="playsong()">Play</button>
-      <!--<embed src="EyesOnMePiano.mid" hidden="false" border="0" width="310" height="45" volume="75%">-->
-    </div>
+    <p>The generated song.</p>
+    <p><input type=file id=file size=80 onchange='fromFile()'></p>
+    <p id=log>no file selected</p>
+    <p><button id=btn onclick='playStop()' disabled>Play</button></p>
     <p> Details </p>
   </body>
   <footer>
