@@ -20,6 +20,10 @@ h3{
   padding-right: 10%;
 }
 
+h4{
+  font-size: 1.2em;
+}
+
 body{
   padding: 2%;
 }
@@ -75,8 +79,7 @@ button{
 }
 
 .fileInput{
-  float: left;
-  margin-left: 9%;
+  margin-left: 7%;
   margin-right: 3%;
   width: 45%;
 }
