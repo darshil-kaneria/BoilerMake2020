@@ -89,3 +89,12 @@ button{
   font-size: 350%;
   margin-left: 5%;
 }
+
+.references{
+  text-align: center;
+}
+
+ul{
+  margin-left: 10%;
+  margin-right: 10%;
+}
