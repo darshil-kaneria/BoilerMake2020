@@ -1,0 +1,11 @@
+{
+  "name": "Music Generation"
+  "version": "1.0.0"
+  "script":{
+    "start": "node server.js"
+  }
+  "dependencies":{
+    "express": "4.13.3"
+  }
+  "author": "Katherine"
+}
