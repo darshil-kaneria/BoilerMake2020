@@ -4,8 +4,9 @@ Welcome to musicGenerationAI! Generate a music sequence based on the theme of yo
 
 ## Run Instructions
 
-1) Upload your midi file to our website. 
-2) Hit "play" to generate a brand new music sequence based on the theme of the midi you just uploaded.
+1) Go to our website: https://musicgenerationai.github.io/web/Main.html
+2) Upload your midi file for analysis. 
+3) Hit "play" to generate a brand new music sequence based on the theme of the midi you just uploaded.
 
 ## Contributors
 Katherine Sandys, Darshil Kaneria, Vidit Shah. Additional reference links available on the website.
