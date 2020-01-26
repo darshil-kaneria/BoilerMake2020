@@ -1,11 +1,17 @@
-{
-  "name": "Music Generation"
-  "version": "1.0.0"
-  "script":{
-    "start": "node server.js"
-  }
-  "dependencies":{
-    "express": "4.13.3"
-  }
-  "author": "Katherine"
-}
+"name": "boilermake2020",
+"version": "1.0.0",
+"description": "Work in progress.  Doing something fun",
+"main": "start.js",
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+"repository": {
+  "type": "git",
+  "url": "git+https://github.com/imemyself2/BoilerMake2020.git"
+},
+"author": "",
+"license": "ISC",
+"bugs": {
+  "url": "https://github.com/imemyself2/BoilerMake2020/issues"
+},
+"homepage": "https://github.com/imemyself2/BoilerMake2020#readme"
