@@ -21,6 +21,7 @@ function clear() {
   btn.disabled = true;
 }
 
+
 function load(data, name) {
   try {
     player = JZZ.MIDI.SMF(data).player();
@@ -71,7 +72,10 @@ function fromFile() {
     var filename = f.name;
     response = runPyScript({data, filename});
     
-    load(data, f.name);
+    var data_path = './test_output.mid';
+    midi_data = require('fs').readFileSync(data_path, 'binary');
+
+    load(midi_data, 'test_output.mid');
   };
   reader.readAsArrayBuffer(f);
 }
