@@ -134,5 +134,4 @@ def create_midi(prediction_output):
 
     midi_stream.write('midi', fp='test_output.mid')
 
-if __name__ == '__main__':
-    generate()
+generate()
