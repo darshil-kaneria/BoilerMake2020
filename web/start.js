@@ -14,7 +14,6 @@ app.use('/dirs', serveIndex('web'))
 function dispHTML(req, res){
 
     res.sendFile('D:\\Work\\College\\Spring 2020\\BoilerMake2020\\web\\Main.html');
-    
 
 }
   
