@@ -10,8 +10,6 @@ from keras.layers import LSTM
 from keras.layers import BatchNormalization as BatchNorm
 from keras.layers import Activation
 
-
-
 def generate():
     """ Generate a piano midi file """
     #load the notes used to train the model

@@ -68,8 +68,6 @@ function fromFile() {
       data += String.fromCharCode(bytes[i]);
     }
     // Can call my own function
-    var blob = new Blob([data]);
-    saveAs(blob, "py_input_file.mid");
     var filename = f.name;
     response = runPyScript({data, filename});
     
